@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: ossec
+# Cookbook:: ossec
 # Recipe:: common
 #
-# Copyright 2010, Opscode, Inc.
+# Copyright:: 2010, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ ruby_block 'ossec install_type' do
     File.open('/var/ossec/etc/ossec-init.conf') do |file|
       file.each_line do |line|
         if line =~ /^TYPE="([^"]+)"/
-          type = Regexp.last_match(1)
           break
         end
       end
@@ -46,7 +45,6 @@ file "#{node['ossec']['dir']}/etc/ossec.conf" do
     all_conf = node['ossec']['conf'].to_hash
     Chef::OSSEC::Helpers.ossec_to_xml('ossec_config' => all_conf)
   }
-
 end
 
 file "#{node['ossec']['dir']}/etc/shared/agent.conf" do
