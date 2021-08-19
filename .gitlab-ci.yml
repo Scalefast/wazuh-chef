@@ -1,0 +1,7 @@
+include:
+  - project: 'v5/tools/pipelines'
+    ref: "stable"
+    file: '/pipelines/scalecraft/chef/.gitlab-ci.yml'
+
+before_script:
+  - cd cookbooks/wazuh_agent
