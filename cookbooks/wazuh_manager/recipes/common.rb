@@ -19,7 +19,7 @@ ruby_block 'ossec install_type' do
       end
     end
 
-    node.normal['ossec']['install_type'] = type
+    node.default['ossec']['install_type'] = type
   end
 end
 
