@@ -101,7 +101,8 @@ ruby_block 'Wait for elasticsearch' do
                  nil
       end
 
-      puts 'Waiting elasticsearch....'; sleep 1
+      puts 'Waiting elasticsearch....'
+      sleep 1
     end
   end
 end
