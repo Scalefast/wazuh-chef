@@ -26,8 +26,6 @@ Style/RescueModifier:
   Enabled: false
 Style/PercentLiteralDelimiters:
   Enabled: false
-Style/BracesAroundHashParameters:
-  Enabled: false
 Style/IndentHash:
   Enabled: false
 Style/SignalException:
